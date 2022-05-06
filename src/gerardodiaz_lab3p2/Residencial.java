@@ -13,8 +13,48 @@ import java.util.ArrayList;
  */
 public class Residencial {
     
-    private String nombre;
+    String nombre;
     ArrayList<Edificio> edificio = new ArrayList();
     ArrayList<Casa> casa = new ArrayList();
+
+    public Residencial() {
+    }
+
+    public Residencial(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public ArrayList<Edificio> getEdificio() {
+        return edificio;
+    }
+
+    public void setEdificio(ArrayList<Edificio> edificio) {
+        this.edificio = edificio;
+    }
+
+    public ArrayList<Casa> getCasa() {
+        return casa;
+    }
+
+    public void setCasa(ArrayList<Casa> casa) {
+        this.casa = casa;
+    }
+
+    @Override
+    public String toString() {
+        return "Residencial{" + "nombre = " + nombre + ",\n"
+                + " edificio=" + edificio + ", \n "
+                + "casa=" + casa + '}';
+    }
+    
+    
     
 }
