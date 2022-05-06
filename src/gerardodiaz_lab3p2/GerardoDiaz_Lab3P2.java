@@ -200,6 +200,8 @@ public class GerardoDiaz_Lab3P2 {
                 }
                 break;
                 case 2: {
+                    
+                    
                      
 
                     System.out.print("Ingrese nombre del cliente: ");
@@ -208,10 +210,12 @@ public class GerardoDiaz_Lab3P2 {
                     System.out.println();
                     c.setNombre(nombre);
                     
+                    
                     System.out.print("Ingrese edad de " + nombre  +": ");
                     int edad = lea.nextInt();
                     System.out.println();
                     c.setEdad(edad);
+                   
                     
                     
                     System.out.print("Ingrese id de " + nombre + ": ");
@@ -220,15 +224,20 @@ public class GerardoDiaz_Lab3P2 {
                     System.out.println();
                     c.setId(id);
                     
+                    
                     System.out.print("Cree un usuario para la empresa: ");
                     String usuario = lea.next();
                     System.out.println();
                     c.setUsuario(usuario);
                     
+                    
                     System.out.print("Cree una contrasenia para la empresa:  ");
-                    String contrenia = lea.next();
+                    String contrasenia = lea.next();
                     System.out.println();
-                    c.setContrasenia(contrenia);
+                    c.setContrasenia(contrasenia);
+                    
+                    Cliente cli = new Cliente(nombre,edad, id, usuario, contrasenia);
+                    cliente.add(cli);
                     
                     
                     
@@ -265,15 +274,22 @@ public class GerardoDiaz_Lab3P2 {
                                     System.out.println("-------------------------------");
                                     switch (o) {
                                         case 1: {
+                                            System.out.println("Ingrese posicion: ");
+                                            int p = lea.nextInt();
+                                            
                                             System.out.print("Ingrese nuevo nombre: ");
                                             lea.nextLine();
                                             String nombre = lea.nextLine();
                                             
+                                            cliente.get(p);
                                             c.setNombre(nombre);
                                             
                                         }
                                         break;
                                         case 2:{
+                                            System.out.println("Ingrese posicion: ");
+                                            int p = lea.nextInt();
+                                            
                                             System.out.print("Ingrese nueva edad: ");
                                             int edad = lea.nextInt();
                                             c.setEdad(edad);
@@ -316,7 +332,28 @@ public class GerardoDiaz_Lab3P2 {
                     
                 }
                 break;
-                case 4:{
+                case 4:{// vender 
+                    System.out.println("Iniciar Sesion");
+                    System.out.println("Ingrese Usuario: ");
+                    String usuario = lea.next();
+                    System.out.print("Ingrese Contrasenia: ");
+                    String contrasenia = lea.next();
+                    
+                    if(usuario.equals(c.getUsuario())|| contrasenia.equals(c.getContrasenia())){
+                        System.out.println(C);
+                        System.out.println();
+                        System.out.println(e);
+                        System.out.println();
+                        System.out.println(a);
+                        System.out.println();
+                        
+                        System.out.println("Que quiere comparar??");
+                        
+                        
+                        
+                    }else{
+                        System.out.println("Mal usuario y contrsenia");
+                    }
                     
                 }
                 break;
